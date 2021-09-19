@@ -1,0 +1,258 @@
+:root{
+    --canvas: rgb(73, 98, 138);
+    --accent-light: #99ccff;
+    --accent-dark: rgb(35, 37, 50);
+    --img-accent: rgb(254, 197, 64);
+    --accent-bright: rgb(255, 33, 100);
+    --banner: #7f7f7f;
+    --text: rgb(255, 254, 211);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+width: 100%;
+background-color: var(--canvas);
+color: var(--text);
+font-family: Calibri, Calibri, Sans-Serif;
+padding: 0;
+margin: 0;
+}
+
+a{
+    color: var(--text);
+}
+
+/** Here begins the Header style **/
+header{
+    width: 100%;
+    background-color: var(--accent-dark);
+    margin: 0;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.header-text{
+    font-size: 35px;
+    text-align: center;
+    background-color: black;
+    border-radius: 3px;
+}
+
+
+header div ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0;
+    padding: 10px;
+}
+
+header div ul li{ 
+    margin: 10px;
+}
+
+/** Here begins the Banner element is style **/
+.banner {
+    height: 300px;
+    width: 100%;
+    margin: 0 0 1em;
+    background-image: url(../images/seattle_3_banner.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner img{
+    height: 150px;
+    position: absolute;
+    left: 1%;
+}
+
+.banner p{
+    position: absolute;
+    right: 5%;
+    top: 75%;
+    background-color: var(--img-accent);
+    width: fit-content;
+    font-size: 45px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+/** Here begins the Main section style **/
+main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 60%;
+    row-gap: 1em;
+    column-gap: 0.5em;
+}
+
+.container-header { 
+    border-right: 2px solid var(--accent-light);
+}
+
+.container-header h1 {
+padding-left: 10px;
+text-align: right;
+flex-flow: row wrap;
+margin: 0;
+padding-right: 10px;
+font-size: 40px;
+}
+
+.container-content{
+    display: flex;
+    text-align: left;
+    flex-flow: row wrap;
+}
+
+/* Styling the list in the Contact Me section */
+.container-content ul {
+    display: flex;
+    align-items: center;
+    
+}
+
+.container-content ul li {
+    margin: 5px;
+}
+
+/* Nested grid */
+.inner-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1em;
+    column-gap: 1em;
+}
+
+/* These correspond to the items in the Work section */
+#item1{
+    height: 300px;
+    grid-column: span 2;
+    background-size: 100%;
+    border: 3px solid var(--img-accent);
+    position: relative;
+}
+
+#item1 img, .item2 img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    opacity: 0.5;
+    position: relative;
+}
+
+#item1 p, .item2 p{
+background-color: var(--img-accent);
+width:fit-content;
+position: absolute;
+bottom: 2%;
+font-size: 20px;
+padding-right: 3px;
+}
+
+.item2{
+    height: 100px;
+    border: 2px solid var(--img-accent);
+    position: relative;   
+}
+
+
+/** hover effects */
+#item1  img:hover, .item2 img:hover {
+   opacity: 1.5;
+}
+
+#item1:hover, .item2:hover {
+    border-color: var(--accent-bright);
+}
+
+#item1:hover p, .item2:hover p {
+    background-color: var(--accent-bright);
+}
+
+
+/** Media queries **/
+@media screen and (max-width: 1024px){
+    header{
+        grid-template-columns: 1fr 2fr;
+        right: 60%;
+    }
+
+    banner{
+        position: relative;
+        margin: 0;
+    }
+
+    .banner p{
+        font-size: 30px;
+        position: absolute;
+    }
+
+    header div ul {
+        list-style-type: none;
+        display: flex;
+        padding: 5px;
+        justify-content: center;
+    }
+
+
+}
+
+
+@media screen and (max-width: 375px) {
+
+    body{
+        width: 100%;
+    }
+
+    header{
+        grid-template-columns: 100%;
+    }
+
+    header div ul {
+        justify-content: center;
+
+    }    
+
+    header div ul li{ 
+        margin: 3px;
+    }
+
+    .banner p{
+        font-size: 20px;
+    }
+
+    .container-header { 
+        border-bottom: 2px solid var(--accent-light);
+    }
+
+    .container-header h1 {
+        text-align: center;
+        flex-flow: row wrap;
+        margin: 0;
+        padding-right: 10px;
+        font-size: 30px;
+        }
+    
+    main{
+        grid-template-columns: 100%;
+    }
+
+    .container-content ul {
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+        
+    }
+    
+    .container-content ul li {
+        margin: 5px;
+    }
+    
+}
