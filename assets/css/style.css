@@ -219,7 +219,7 @@ font-size: 40px;
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
 
     body{
         width: 100%;
@@ -255,7 +255,7 @@ font-size: 40px;
         }
     
     main{
-        grid-template-columns: 100%;
+        grid-template-columns: auto;
     }
 
     .container-content ul {
