@@ -7,4 +7,5 @@ The about me will contain only filler text for now.
 The Work section contains a grid with images representing different projects.
 The sections within the work section enlarge when they are active or in focus. The fist one is perpetually enlarged.
 The footer or Contact Me section, contains links to my contact information which are now placeholders for the most part.
+The page can be found here: https://jmarq019.github.io/first_portfolio/
 ![screenshot of the page](./assets/images/first_portfolio.screenshot.png)
