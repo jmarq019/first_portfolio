@@ -131,15 +131,13 @@ font-size: 40px;
 }
 
 /* These correspond to the items in the Work section */
-#item1{
-    height: 300px;
-    grid-column: span 2;
-    background-size: 100%;
-    border: 3px solid var(--img-accent);
-    position: relative;
+.item{
+    height: 100px;
+    border: 2px solid var(--img-accent);
+    position: relative;   
 }
 
-#item1 img, .item2 img{
+.item img{
     width: 100%;
     object-fit: cover;
     height: 100%;
@@ -147,35 +145,51 @@ font-size: 40px;
     position: relative;
 }
 
-#item1 p, .item2 p{
-background-color: var(--img-accent);
-width:fit-content;
-position: absolute;
-bottom: 2%;
-font-size: 20px;
-padding-right: 3px;
-}
+.item p{
+    background-color: var(--img-accent);
+    width:fit-content;
+    position: absolute;
+    bottom: 2%;
+    font-size: 20px;
+    padding-right: 3px;
+    }
 
-.item2{
-    height: 100px;
-    border: 2px solid var(--img-accent);
-    position: relative;   
+.item:first-child{
+    height: 300px;
+    grid-column: span 2;
+    background-size: 100%;
+    border: 3px solid var(--img-accent);
+    position: relative;
 }
-
 
 /** hover effects */
-#item1  img:hover, .item2 img:hover {
+.item  img:hover {
    opacity: 1.5;
 }
 
-#item1:hover, .item2:hover {
+.item:hover {
     border-color: var(--accent-bright);
 }
 
-#item1:hover p, .item2:hover p {
+.item:hover p {
     background-color: var(--accent-bright);
 }
 
+.item:active {
+    height: 300px;
+    grid-column: span 2;
+    background-size: 100%;
+    border: 3px solid var(--img-accent);
+    position: relative;
+}
+
+.item:focus {
+    height: 300px;
+    grid-column: span 2;
+    background-size: 100%;
+    border: 3px solid var(--img-accent);
+    position: relative;
+}
 
 /** Media queries **/
 @media screen and (max-width: 1024px){
