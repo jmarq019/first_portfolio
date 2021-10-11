@@ -152,15 +152,17 @@ font-size: 40px;
     bottom: 2%;
     font-size: 20px;
     padding-right: 3px;
-    }
+    
+}
 
-.item:first-child{
+
+/* .item:first-child{
     height: 300px;
     grid-column: span 2;
     background-size: 100%;
     border: 3px solid var(--img-accent);
     position: relative;
-}
+} */
 
 /** hover effects */
 .item  img:hover {
@@ -169,6 +171,7 @@ font-size: 40px;
 
 .item:hover {
     border-color: var(--accent-bright);
+    height: 300px;
 }
 
 .item:hover p {
